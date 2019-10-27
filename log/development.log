@@ -190,3 +190,13 @@ Redirected to http://159.89.235.135:35193/articles/1
 Completed 302 Found in 93ms (ActiveRecord: 88.8ms)
 
 
+Started GET "/articles/1" for 69.222.119.42 at 2019-10-27 15:43:28 +0000
+Cannot render console from 69.222.119.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
