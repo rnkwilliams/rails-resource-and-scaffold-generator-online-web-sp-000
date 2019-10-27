@@ -200,3 +200,28 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles/1/edit" for 69.222.119.42 at 2019-10-27 15:43:37 +0000
+Cannot render console from 69.222.119.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/1" for 69.222.119.42 at 2019-10-27 15:43:49 +0000
+Cannot render console from 69.222.119.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z9sJjkZMTRcxKABLhJfCUb1Yz4hsWKa0KtXs63gyDc2t9sR9JgxxhQdMemtjKDZxYVqEN4jOw78AzAywIkLWvA==", "article"=>{"title"=>"The Book", "body"=>"Its really not about much, but nothing."}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "articles" SET "body" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["body", "Its really not about much, but nothing."], ["updated_at", "2019-10-27 15:43:49.738577"], ["id", 1]]
+  [1m[35m (40.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.89.235.135:35193/articles/1
+Completed 302 Found in 46ms (ActiveRecord: 41.3ms)
+
+
+Started GET "/articles/1" for 69.222.119.42 at 2019-10-27 15:43:49 +0000
+Cannot render console from 69.222.119.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
